@@ -22,15 +22,15 @@ jobs:
           name: Build execution file
           command: go build main.go
 
-      - save_cache: # Store cache in the /go/pkg directory
-          key: v1-pkg-cache
+      - save_cache:
+          key: go-mod-v1-{{ checksum "go.sum" }}
           paths:
-            - "/go/pkg"
+            - "/go/pkg/mod"
 
       - run:
           name: Start service
           command: ./main
-          background: true # keep service running and proceed to next step
+          background: true
 
       - run:
           name: Validate service is working
