@@ -16,7 +16,7 @@ jobs:
 
       - run:
           name: Run unit tests
-          command: go test ./test
+          command: go test -v -cover ./test/...
 
       - run:
           name: Build execution file
