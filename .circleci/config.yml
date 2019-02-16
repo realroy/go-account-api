@@ -2,8 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/golang:1.11-stretch-node-browsers-legacy
-    working_directory: /realroy/go-account-api
+      - image: circleci/golang:1.11
+    working_directory: /go-account-api
     steps:
       - checkout
 
