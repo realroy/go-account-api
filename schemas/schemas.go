@@ -1,8 +1,12 @@
 package schemas
 
 type (
+	CreateAccountArg struct {
+		Email    string `json: "email"`
+		Password string `json: "password`
+	}
 	Account struct {
-		ID       int    `json:"id"`
+		ID       string `json:"id"`
 		Email    string `json:"email"`
 		Password string `json:"password"`
 	}
